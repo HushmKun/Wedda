@@ -1,0 +1,1283 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wedda Marketing Agency</title>
+    
+    <!-- favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicon/apple-touch-icon.png' %}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon/favicon-32x32.png' %}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicons/favicon-16x16.png' %}" />
+    <link rel="manifest" href="{% static 'images/favicon/site.webmanifest' %}" />
+
+    <!-- SEO -->
+    <meta name="description" content="We help businesses grow with data-driven digital marketing strategies. Get expert SEO, PPC, social media, and content marketing services. Contact us today!">
+    <meta name="keywords" content="marketing agency, digital marketing, SEO, PPC, social media marketing, content marketing, web design">
+    <meta name="robots" content="index, nofollow">
+
+    <meta property="og:title" content="Wedda Marketing Agency - Grow Your Business Online">
+    <meta property="og:description" content="Expert digital marketing services to boost your online presence and drive results.">
+    <meta property="og:image" content="https://wedda.agency/static/images/resources/wedda-logo.png">
+    <meta property="og:url" content="https://wedda.agency/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Wedda Marketing Agency">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Wedda Marketing Agency - Your Digital Marketing Partner">
+    <meta name="twitter:description" content="We deliver results-driven marketing strategies to elevate your brand.">
+    <meta name="twitter:image" content="https://wedda.agency/static/images/resources/wedda-logo.png">
+    <meta name="twitter:site" content="@wedda_agency">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    {% comment %} <link href="https://fonts.cdnfonts.com/css/nanami" rel="stylesheet"> {% endcomment %}
+    {% comment %} <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> {% endcomment %}
+
+                
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+
+        {% comment %} <link rel="stylesheet" href="{% static 'vendors/bootstrap/css/bootstrap.min.css' %}" /> {% endcomment %}
+        {% comment %} <link rel="stylesheet" href="{% static 'vendors/jarallax/jarallax.css' %}" /> {% endcomment %}
+        {% comment %} <link rel="stylesheet" href="{% static 'vendors/jquery-ui/jquery-ui.css' %}" /> {% endcomment %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jarallax@2.2.1/dist/jarallax.min.css">
+
+    <link rel="stylesheet" href="{% static 'vendors/animate/animate.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/animate/custom-animate.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/fontawesome/css/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/jquery-magnific-popup/jquery.magnific-popup.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/nouislider/nouislider.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/nouislider/nouislider.pips.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/odometer/odometer.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/swiper/swiper.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/qutiiz-icons/style.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/qutiiz-icons-two/style.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/tiny-slider/tiny-slider.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/reey-font/stylesheet.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.theme.default.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/bxslider/jquery.bxslider.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/bootstrap-select/css/bootstrap-select.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/vegas/vegas.min.css' %}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-ui@1.14.1/themes/base/theme.min.css" />
+    <link rel="stylesheet" href="{% static 'vendors/timepicker/timePicker.css' %}" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="{% static 'css/qutiiz.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/qutiiz-responsive.css' %}" />
+</head>
+
+<body>
+    <div class="preloader">
+        <img class="preloader__image" width="120" src="{% static 'images/loader.png' %}" alt="" />
+    </div>
+    <!-- /.preloader -->
+    <div class="page-wrapper">
+        <header class="main-header clearfix">
+            <nav class="main-menu clearfix">
+                <div class="main-menu-wrapper clearfix">
+                    <div class="main-menu-wrapper__left">
+                        <div class="main-menu-wrapper__logo">
+                            <a href="{% url 'index' %}"><img src="{% static 'images/resources/logo.png' %}" alt="" style="max-width:100px;"></a>
+                        </div>
+                        <div class="main-menu-wrapper__main-menu">
+                            <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                            <ul class="main-menu__list one-page-scroll-menu">
+                                <li class="current megamenu scrollToLink">
+                                    <a href="#home">Home </a>
+                                </li>
+                                <li class="scrollToLink">
+                                    <a href="#about">About </a>
+                                </li>
+                                <li class="scrollToLink">
+                                    <a href="#services">Services</a>
+                                </li>
+                                <li class="scrollToLink">
+                                    <a href="#showcase">Work showcase</a>
+                                </li>
+                                <li class="scrollToLink">
+                                    <a href="#testimonial">Testimonial</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="main-menu-wrapper__right">
+                        <div class="main-menu-wrapper__search-box">
+                            <a href="{% url 'admin:index' %}" class="main-menu-wrapper__search icon-right-arrow"></a>
+                        </div>
+                        <div class="main-menu-wrapper__call">
+                            <div class="main-menu-wrapper__call-icon">
+                                <span class="icon-chatting"></span>
+                            </div>
+                            <div class="main-menu-wrapper__call-number">
+                                <p>Call Anytime</p>
+                                <h5><a href="tel:+201115424261">0111 542 4261</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="stricky-header stricked-menu main-menu">
+            <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
+        </div><!-- /.stricky-header -->
+
+        <!--Main Slider Start-->
+        <section class="main-slider" id="home">
+            <div class="swiper-container thm-swiper__slider" data-swiper-options='{"slidesPerView": 1, "loop": true,
+                "effect": "fade",
+                "pagination": {
+                    "el": "#main-slider-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                },
+                "navigation": {
+                    "nextEl": "#main-slider__swiper-button-next",
+                    "prevEl": "#main-slider__swiper-button-prev"
+                },
+                "autoplay": {
+                    "delay": 5000
+                }}'>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="image-layer"
+                            style="background-image: url({% static 'images/backgrounds/Slider-1.jpeg' %});">
+                        </div>
+                        <!-- /.image-layer -->
+                        <div class="main-slider-border"></div>
+                        <div class="main-slider-border main-slider-border-two"></div>
+                        <div class="main-slider-border main-slider-border-three"></div>
+                        <div class="main-slider-border main-slider-border-four"></div>
+                        <div class="main-slider-border main-slider-border-five"></div>
+                        <div class="main-slider-border main-slider-border-six"></div>
+
+                        <div class="main-slider-shape-1"></div>
+                        <div class="main-slider-shape-2"></div>
+                        <div class="main-slider-shape-3"></div>
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="main-slider__content">
+                                        <br>
+                                        <p>Welcome to Wedda Marketing Agency</p>
+                                        <h2>Make Your Business <br>Reach The Stars</h2>
+                                        <a href="#about" class="thm-btn">Discover More</a>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="image-layer"
+                            style="background-image: url({% static 'images/backgrounds/Slider-2.jpeg' %});">
+                        </div>
+                        <!-- /.image-layer -->
+                        <div class="main-slider-border"></div>
+                        <div class="main-slider-border main-slider-border-two"></div>
+                        <div class="main-slider-border main-slider-border-three"></div>
+                        <div class="main-slider-border main-slider-border-four"></div>
+                        <div class="main-slider-border main-slider-border-five"></div>
+                        <div class="main-slider-border main-slider-border-six"></div>
+
+                        <div class="main-slider-shape-1"></div>
+                        <div class="main-slider-shape-2"></div>
+                        <div class="main-slider-shape-3"></div>
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="main-slider__content">
+                                        <br>
+                                        <p>Transforming Ideas into Stellar Brands.</p>
+                                        <h2>Ready for Lift-Off? <br> Let's Go!</h2>
+                                        <a href="#about" class="thm-btn">Discover More</a>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="image-layer"
+                            style="background-image: url({% static 'images/backgrounds/Slider-3.jpeg' %});">
+                        </div>
+                        <!-- /.image-layer -->
+                        <div class="main-slider-border"></div>
+                        <div class="main-slider-border main-slider-border-two"></div>
+                        <div class="main-slider-border main-slider-border-three"></div>
+                        <div class="main-slider-border main-slider-border-four"></div>
+                        <div class="main-slider-border main-slider-border-five"></div>
+                        <div class="main-slider-border main-slider-border-six"></div>
+
+                        <div class="main-slider-shape-1"></div>
+                        <div class="main-slider-shape-2"></div>
+                        <div class="main-slider-shape-3"></div>
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="main-slider__content">
+                                        <br>
+                                        <p>Marketing That Makes Your Brand Flourish.</p>
+                                        <h2>Nurturing Your Brand's <br> Full Bloom.</h2>
+                                        <a href="#about" class="thm-btn">Discover More</a>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-pagination" id="main-slider-pagination"></div>
+                <div class="main-slider__nav">
+                    <div class="swiper-button-prev" id="main-slider__swiper-button-next">
+                        <i class="icon-right-arrow icon-left-arrow"></i>Prev
+                    </div>
+                    <div class="swiper-button-next" id="main-slider__swiper-button-prev">
+                        Next <i class="icon-right-arrow"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Main Slider End-->
+
+        <!--Get To Know Start-->
+        <section class="get-to-know" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="get-to-know__left wow slideInLeft" data-wow-delay="100ms"
+                            data-wow-duration="2500ms">
+                            <div class="get-to-know__img">
+                                <img src="{% static 'images/resources/bro.png' %}" alt="">
+                                {% comment %} <div class="get-to-know__video-link">
+                                    <a href="https://www.youtube.com/watch?v=Get7rqXYrbQ" class="video-popup">
+                                        <div class="get-to-know__video-icon">
+                                            <span class="icon-play-button"></span>
+                                        </div>
+                                    </a>
+                                </div> {% endcomment %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="get-to-know__right">
+                            <div class="get-to-know-big-text">WEDDA</div>  
+                            <div class="section-title text-left">
+                                <span class="section-title__tagline">get to know us</span>
+                                <h2 class="section-title__title">We’re ready to grow your business with us</h2>
+                            </div>
+                            <p class="get-to-know__text-1">We’re committed to delivering the best digital marketing for
+                                your businesses</p>
+                            <p class="get-to-know__text-2">We don't just market your brand; we become your brand's storyteller. 
+                                We weave captivating narratives that resonate with
+                                your audience and leave a lasting impression.</p>
+                            <div class="get-to-know__progress">
+                                <div class="get-to-know__progress-single">
+                                    <h4 class="get-to-know__progress-title">Digital marketing</h4>
+                                    <div class="bar">
+                                        <div class="bar-inner count-bar" data-percent="80%">
+                                            <div class="count-text">80%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="get-to-know__person">
+                                <div class="get-to-know__person-img">
+                                    <img src="{% static 'images/resources/profile.jpeg' %}" alt="" width="77">
+                                </div>
+                                <div class="get-to-know__person-content">
+                                    <h2 class="get-to-know__person-name">Mahmoud Mamdouh</h2>
+                                    <p class="get-to-know__person-founder">CEO & co Founder</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Get To Know End-->
+
+        <!--Brand One Start-->
+        <section class="brand-one">
+            <div class="container">
+                <h2 class="mb-4 text-capitalize text-center text-decoration-underline"> Our success parteners </h2>
+                <div class="thm-swiper__slider swiper-container" data-swiper-options='{"spaceBetween": 100, "slidesPerView": 5, "autoplay": { "delay": 5000 }, "breakpoints": {
+                    "0": {
+                        "spaceBetween": 30,
+                        "slidesPerView": 2
+                    },
+                    "375": {
+                        "spaceBetween": 30,
+                        "slidesPerView": 2
+                    },
+                    "575": {
+                        "spaceBetween": 30,
+                        "slidesPerView": 3
+                    },
+                    "767": {
+                        "spaceBetween": 50,
+                        "slidesPerView": 4
+                    },
+                    "991": {
+                        "spaceBetween": 50,
+                        "slidesPerView": 5
+                    },
+                    "1199": {
+                        "spaceBetween": 100,
+                        "slidesPerView": 5
+                    }
+                }}'>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="{% static 'images/brand/brand_4.png' %}" alt="">
+                        </div><!-- /.swiper-slide -->
+                        <div class="swiper-slide">
+                            <img src="{% static 'images/brand/brand_1.png' %}" alt="">
+                        </div><!-- /.swiper-slide -->
+                        <div class="swiper-slide">
+                            <img src="{% static 'images/brand/brand_0.png' %}" alt="">
+                        </div><!-- /.swiper-slide -->
+                        <div class="swiper-slide">
+                            <img src="{% static 'images/brand/brand_3.png' %}" alt="">
+                        </div><!-- /.swiper-slide -->
+                        <div class="swiper-slide">
+                            <img src="{% static 'images/brand/brand_2.png' %}" alt="">
+                        </div><!-- /.swiper-slide -->
+                        {% comment %} <div class="swiper-slide">
+                            <img src="{% static 'images/brand/brand_5.png' %}" alt="">
+                        </div><!-- /.swiper-slide -->
+                        <div class="swiper-slide">
+                            <img src="{% static 'images/brand/brand_6.png' %}" alt="">
+                        </div><!-- /.swiper-slide -->
+                        <div class="swiper-slide">
+                            <img src="{% static 'images/brand/brand_7.png' %}" alt="">
+                        </div><!-- /.swiper-slide --> {% endcomment %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Brand One End-->
+
+        <!--Services One Start-->
+        <section class="services-one" id="services">
+            <div class="services-one-shape wow slideInRight" data-wow-delay="100ms" data-wow-duration="2500ms"><img
+                    class="float-bob-x" src="{% static 'images/shapes/services-one-shape.png' %}" alt=""></div>
+            <div class="container">
+                <div class="services-one__top">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="services-one__top-left">
+                                <div class="section-title text-left">
+                                    <span class="section-title__tagline">our services list</span>
+                                    <h2 class="section-title__title">what we’re offering</h2>
+                                </div>
+                            </div>
+                        </div>
+                        {% comment %} <div class="col-xl-6 col-lg-6">
+                            <div class="services-one__top-text-box">
+                                <p class="services-one__top-text">
+                                    <a class="services-one__arrow" href="website-development.html"><span
+                                            class="icon-right-arrow"></span></a>
+                                </p>
+                            </div>
+                        </div> {% endcomment %}
+                    </div>
+                </div>
+                <div class="services-one__bottom">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <ul class="list-unstyled services-one__list">
+                                <li class="services-one__single wow fadeInUp" data-wow-delay="300ms">
+                                    <div class="services-one__icon">
+                                        <span class="icon-online-shopping"></span>
+                                    </div>
+                                    <div class="services-one__count"></div>
+                                    <h3 class="services-one__title"><a href="#">strategy & <br>
+                                            Digital marketing</a></h3>
+                                    <a class="services-one__arrow" href="#"><span
+                                            class="icon-right-arrow"></span></a>
+                                </li>
+                                <li class="services-one__single wow fadeInUp" data-wow-delay="100ms">
+                                    <div class="services-one__icon">
+                                        <span class="icon-growth"></span>
+                                    </div>
+                                    <div class="services-one__count"></div>
+                                    <h3 class="services-one__title"><a href="#">Visual <br> graphic
+                                            design</a></h3>
+                                    <a class="services-one__arrow" href="#"><span
+                                            class="icon-right-arrow"></span></a>
+                                </li>
+                                <li class="services-one__single wow fadeInUp" data-wow-delay="400ms">
+                                    <div class="services-one__icon">
+                                        <span class="icon-front-end"></span>
+                                    </div>
+                                    <div class="services-one__count"></div>
+                                    <h3 class="services-one__title"><a href="#">effective <br>
+                                            business growth</a></h3>
+                                    <a class="services-one__arrow" href="#"><span
+                                            class="icon-right-arrow"></span></a>
+                                </li>
+                                <li class="services-one__single wow fadeInUp" data-wow-delay="200ms">
+                                    <div class="services-one__icon">
+                                        <span class="icon-webpage"></span>
+                                    </div>
+                                    <div class="services-one__count"></div>
+                                    <h3 class="services-one__title"><a href="#">ًWeb  <br>
+                                            Development</a></h3>
+                                    <a class="services-one__arrow" href="#"><span
+                                            class="icon-right-arrow"></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="services-one__find-solutions">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <p class="services-one__find-solutions-text">wedda services built specifically for your
+                                business. <a href="#about">Find Your Solution</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Services One End-->
+
+        <!--Project One Start-->
+        <section class="project-one" id="showcase">
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="section-title__tagline">recent projects</span>
+                    <h2 class="section-title__title">work showcase</h2>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <ul class="project-filter style1 post-filter has-dynamic-filters-counter list-unstyled">
+                            <li data-filter=".filter-item" class="active"><span class="filter-text">All</span></li>
+                            <li data-filter=".bra"><span class="filter-text">Branding</span></li>
+                            <li data-filter=".photo"><span class="filter-text">Photography</span></li>
+                            <li data-filter=".market"><span class="filter-text">Marketing</span></li>
+                            <li data-filter=".web"><span class="filter-text">Web Design</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row filter-layout masonary-layout">
+                    <div class="col-xl-3 col-lg-6 col-md-6 filter-item market photo">
+                        <!--Portfolio One Single-->
+                        <div class="project-one__single">
+                            <div class="project-one__img">
+                                <img src="{% static 'images/showcase/pizza.jpeg' %}" alt="">
+                                <div class="project-one__hover project-one__hover-pl-40">
+                                    <p class="project-one__tagline">Graphic</p>
+                                    <h3 class="project-one__title"><a href="#">Pizza Land</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 filter-item market photo">
+                        <!--Portfolio One Single-->
+                        <div class="project-one__single">
+                            <div class="project-one__img">
+                                <img src="{% static 'images/showcase/hulk.jpeg' %}" alt="">
+                                <div class="project-one__hover">
+                                    <p class="project-one__tagline">Marketing</p>
+                                    <h3 class="project-one__title"><a href="#">Hulk Gym</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 filter-item bra market photo">
+                        <!--Portfolio One Single-->
+                        <div class="project-one__single">
+                            <div class="project-one__img">
+                                <img src="{% static 'images/showcase/3akarat.jpeg' %}" alt="">
+                                <div class="project-one__hover project-one__hover-pl-40">
+                                    <p class="project-one__tagline">Graphic</p>
+                                    <h3 class="project-one__title"><a href="#">قهـــوة العقـارات</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 filter-item bra photo web">
+                        <!--Portfolio One Single-->
+                        <div class="project-one__single">
+                            <div class="project-one__img">
+                                <img src="{% static 'images/showcase/ksa.jpeg' %}" alt="">
+                                <div class="project-one__hover project-one__hover-pl-40">
+                                    <p class="project-one__tagline">Branding</p>
+                                    <h3 class="project-one__title"><a href="#">KSA Industries</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 filter-item bra web photo market">
+                        <!--Portfolio One Single-->
+                        <div class="project-one__single">
+                            <div class="project-one__img">
+                                <img src="{% static 'images/showcase/Rigel.jpeg' %}" alt="">
+                                <div class="project-one__hover project-one__hover-pl-40">
+                                    <p class="project-one__tagline">Branding</p>
+                                    <h3 class="project-one__title"><a href="#">Rigel Store</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 filter-item market">
+                        <!--Portfolio One Single-->
+                        <div class="project-one__single">
+                            <div class="project-one__img">
+                                <img src="{% static 'images/showcase/Hoor.jpeg' %}" alt="">
+                                <div class="project-one__hover project-one__hover-pl-40">
+                                    <p class="project-one__tagline">Marketing</p>
+                                    <h3 class="project-one__title"><a href="#">Hoor Clothing</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 filter-item market">
+                        <!--Portfolio One Single-->
+                        <div class="project-one__single">
+                            <div class="project-one__img">
+                                <img src="{% static 'images/showcase/glow_girl.jpeg' %}" alt="">
+                                <div class="project-one__hover project-one__hover-pl-40">
+                                    <p class="project-one__tagline">Web Design</p>
+                                    <h3 class="project-one__title"><a href="#">Glow Girl Clinic</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 filter-item photo">
+                        <!--Portfolio One Single-->
+                        <div class="project-one__single">
+                            <div class="project-one__img">
+                                <img src="{% static 'images/showcase/diga.jpeg' %}" alt="">
+                                <div class="project-one__hover">
+                                    <p class="project-one__tagline">Market</p>
+                                    <h3 class="project-one__title"><a href="#">Diga Clothing</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 filter-item market">
+                        <!--Portfolio One Single-->
+                        <div class="project-one__single">
+                            <div class="project-one__img">
+                                <img src="{% static 'images/showcase/oro_hair.jpeg' %}" alt="">
+                                <div class="project-one__hover project-one__hover-pl-40">
+                                    <p class="project-one__tagline">Marketing</p>
+                                    <h3 class="project-one__title"><a href="#">Oro Hair</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 filter-item market">
+                        <!--Portfolio One Single-->
+                        <div class="project-one__single">
+                            <div class="project-one__img">
+                                <img src="{% static 'images/showcase/oro_clinic.jpeg' %}" alt="">
+                                <div class="project-one__hover project-one__hover-pl-40">
+                                    <p class="project-one__tagline">Marketing</p>
+                                    <h3 class="project-one__title"><a href="#">Oro Clinic</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Project One End-->
+
+        <!--Counter One Start-->
+        <section class="counter-one">
+            <div class="counter-one-shape-1"></div>
+            <div class="counter-one-shape-2"></div>
+            <div class="counter-one-shape-3"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <ul class="list-unstyled counter-one__list">
+                            <li class="counter-one__single wow fadeInUp" data-wow-delay="500ms">
+                                <div class="counter-one__icon">
+                                    <span class="icon-checking"></span>
+                                </div>
+                                <h3 class="odometer" data-count="20">00</h3>
+                                <p class="counter-one__text">Projects Completed</p>
+                            </li>
+                            <li class="counter-one__single wow fadeInUp" data-wow-delay="750ms">
+                                <div class="counter-one__icon">
+                                    <span class="icon-recommend"></span>
+                                </div>
+                                <h3 class="odometer" data-count="30">00</h3>
+                                <p class="counter-one__text">Satisfied Clients</p>
+                            </li>
+                            <li class="counter-one__single wow fadeInUp" data-wow-delay="1000ms">
+                                <div class="counter-one__icon">
+                                    <span class="icon-consulting"></span>
+                                </div>
+                                <h3 class="odometer" data-count="12">00</h3>
+                                <p class="counter-one__text">Expert Teams</p>
+                            </li>
+                            <li class="counter-one__single wow fadeInUp" data-wow-delay="1250ms">
+                                <div class="counter-one__icon">
+                                    <span class="icon-increment"></span>
+                                </div>
+                                <h3 class="odometer" data-count="19">00</h3>
+                                <p class="counter-one__text">repeat customers</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Counter One End-->
+
+        <!--Why Choose One Start-->
+        <section class="why-choose-one mb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="why-choose-one__left wow fadeInLeft" data-wow-delay="100ms"
+                            data-wow-duration="2500ms">
+                            <div class="why-choose-one__img">
+                                <img src="{% static 'images/resources/pana.png' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="why-choose-one__right">
+                            <div class="section-title text-left">
+                                <span class="section-title__tagline">company benefits</span>
+                                <h2 class="section-title__title">Why You should choose wedda services?</h2>
+                            </div>
+                            <p class="why-choose-one__text">Choose wedda for innovative marketing solutions. Our experienced team delivers tailored strategies that exceed your expectations and drive business growth.</p>
+                            <div class="why-choose-one__bottom">
+                                {% comment %} <div class="why-choose-one__bottom-img">
+                                     <img src="{% static 'images/resources/pana.png' %}" alt="" style="width:100%"> 
+                                </div> {% endcomment %}
+                                <ul class="list-unstyled why-choose-one__points">
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-draw-check-mark"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p>Data-Driven Success</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-draw-check-mark"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p>Creative & Engaging Content</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-draw-check-mark"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p>Personalized Solutions</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-draw-check-mark"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p>Industry Expertise</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Why Choose One End-->
+
+        <!--Team One Start-->
+        {% comment %} <section class="team-one" id="team">
+            <div class="team-one-container">
+                <div class="section-title text-center">
+                    <span class="section-title__tagline">our team members</span>
+                    <h2 class="section-title__title">Meet expert people</h2>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="team-one__carousel owl-theme owl-carousel">
+                            <!--Team One Single-->
+                            <div class="team-one__single">
+                                <div class="team-one__img">
+                                    <img src="{% static 'images/team/team-one-img-1.jpg' %}" alt="">
+                                </div>
+                                <div class="team-one__content">
+                                    <h4 class="team-one__name">Jessica Brown</h4>
+                                    <p class="team-one__title">Designer</p>
+                                </div>
+                                <div class="team-one__hover">
+                                    <h4 class="team-one__hover-name">Jessica Brown</h4>
+                                    <p class="team-one__hover-title">Designer</p>
+                                    <div class="team-one__social">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-facebook"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Team One Single-->
+                            <div class="team-one__single">
+                                <div class="team-one__img">
+                                    <img src="{% static 'images/team/team-one-img-2.jpg' %}" alt="">
+                                </div>
+                                <div class="team-one__content">
+                                    <h4 class="team-one__name">Kevin Martin</h4>
+                                    <p class="team-one__title">Designer</p>
+                                </div>
+                                <div class="team-one__hover">
+                                    <h4 class="team-one__hover-name">Kevin Martin</h4>
+                                    <p class="team-one__hover-title">Designer</p>
+                                    <div class="team-one__social">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-facebook"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Team One Single-->
+                            <div class="team-one__single">
+                                <div class="team-one__img">
+                                    <img src="{% static 'images/team/team-one-img-3.jpg' %}" alt="">
+                                </div>
+                                <div class="team-one__content">
+                                    <h4 class="team-one__name">Rose ford</h4>
+                                    <p class="team-one__title">Designer</p>
+                                </div>
+                                <div class="team-one__hover">
+                                    <h4 class="team-one__hover-name">Rose ford</h4>
+                                    <p class="team-one__hover-title">Designer</p>
+                                    <div class="team-one__social">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-facebook"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Team One Single-->
+                            <div class="team-one__single">
+                                <div class="team-one__img">
+                                    <img src="{% static 'images/team/team-one-img-4.jpg' %}" alt="">
+                                </div>
+                                <div class="team-one__content">
+                                    <h4 class="team-one__name">Mike hardson</h4>
+                                    <p class="team-one__title">Designer</p>
+                                </div>
+                                <div class="team-one__hover">
+                                    <h4 class="team-one__hover-name">Mike hardson</h4>
+                                    <p class="team-one__hover-title">Designer</p>
+                                    <div class="team-one__social">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-facebook"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Team One Single-->
+                            <div class="team-one__single">
+                                <div class="team-one__img">
+                                    <img src="{% static 'images/team/team-one-img-1.jpg' %}" alt="">
+                                </div>
+                                <div class="team-one__content">
+                                    <h4 class="team-one__name">Jessica Brown</h4>
+                                    <p class="team-one__title">Designer</p>
+                                </div>
+                                <div class="team-one__hover">
+                                    <h4 class="team-one__hover-name">Jessica Brown</h4>
+                                    <p class="team-one__hover-title">Designer</p>
+                                    <div class="team-one__social">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-facebook"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Team One Single-->
+                            <div class="team-one__single">
+                                <div class="team-one__img">
+                                    <img src="{% static 'images/team/team-one-img-2.jpg' %}" alt="">
+                                </div>
+                                <div class="team-one__content">
+                                    <h4 class="team-one__name">Kevin Martin</h4>
+                                    <p class="team-one__title">Designer</p>
+                                </div>
+                                <div class="team-one__hover">
+                                    <h4 class="team-one__hover-name">Kevin Martin</h4>
+                                    <p class="team-one__hover-title">Designer</p>
+                                    <div class="team-one__social">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-facebook"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Team One Single-->
+                            <div class="team-one__single">
+                                <div class="team-one__img">
+                                    <img src="{% static 'images/team/team-one-img-3.jpg' %}" alt="">
+                                </div>
+                                <div class="team-one__content">
+                                    <h4 class="team-one__name">Rose ford</h4>
+                                    <p class="team-one__title">Designer</p>
+                                </div>
+                                <div class="team-one__hover">
+                                    <h4 class="team-one__hover-name">Rose ford</h4>
+                                    <p class="team-one__hover-title">Designer</p>
+                                    <div class="team-one__social">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-facebook"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Team One Single-->
+                            <div class="team-one__single">
+                                <div class="team-one__img">
+                                    <img src="{% static 'images/team/team-one-img-4.jpg' %}" alt="">
+                                </div>
+                                <div class="team-one__content">
+                                    <h4 class="team-one__name">Mike hardson</h4>
+                                    <p class="team-one__title">Designer</p>
+                                </div>
+                                <div class="team-one__hover">
+                                    <h4 class="team-one__hover-name">Mike hardson</h4>
+                                    <p class="team-one__hover-title">Designer</p>
+                                    <div class="team-one__social">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-facebook"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Team One Single-->
+                            <div class="team-one__single">
+                                <div class="team-one__img">
+                                    <img src="{% static 'images/team/team-one-img-1.jpg' %}" alt="">
+                                </div>
+                                <div class="team-one__content">
+                                    <h4 class="team-one__name">Jessica Brown</h4>
+                                    <p class="team-one__title">Designer</p>
+                                </div>
+                                <div class="team-one__hover">
+                                    <h4 class="team-one__hover-name">Jessica Brown</h4>
+                                    <p class="team-one__hover-title">Designer</p>
+                                    <div class="team-one__social">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-facebook"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Team One Single-->
+                            <div class="team-one__single">
+                                <div class="team-one__img">
+                                    <img src="{% static 'images/team/team-one-img-2.jpg' %}" alt="">
+                                </div>
+                                <div class="team-one__content">
+                                    <h4 class="team-one__name">Kevin Martin</h4>
+                                    <p class="team-one__title">Designer</p>
+                                </div>
+                                <div class="team-one__hover">
+                                    <h4 class="team-one__hover-name">Kevin Martin</h4>
+                                    <p class="team-one__hover-title">Designer</p>
+                                    <div class="team-one__social">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-facebook"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Team One Single-->
+                            <div class="team-one__single">
+                                <div class="team-one__img">
+                                    <img src="{% static 'images/team/team-one-img-3.jpg' %}" alt="">
+                                </div>
+                                <div class="team-one__content">
+                                    <h4 class="team-one__name">Rose ford</h4>
+                                    <p class="team-one__title">Designer</p>
+                                </div>
+                                <div class="team-one__hover">
+                                    <h4 class="team-one__hover-name">Rose ford</h4>
+                                    <p class="team-one__hover-title">Designer</p>
+                                    <div class="team-one__social">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-facebook"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Team One Single-->
+                            <div class="team-one__single">
+                                <div class="team-one__img">
+                                    <img src="{% static 'images/team/team-one-img-4.jpg' %}" alt="">
+                                </div>
+                                <div class="team-one__content">
+                                    <h4 class="team-one__name">Mike hardson</h4>
+                                    <p class="team-one__title">Designer</p>
+                                </div>
+                                <div class="team-one__hover">
+                                    <h4 class="team-one__hover-name">Mike hardson</h4>
+                                    <p class="team-one__hover-title">Designer</p>
+                                    <div class="team-one__social">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-facebook"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> {% endcomment %}
+        <!--Team One End-->
+
+        <!--Testimonial One Start-->
+        <section class="testimonial-one" id="testimonial">
+            <div class="testimonial-one__inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-4">
+                            <div class="testimonial-one__left">
+                                <div class="section-title text-left">
+                                    <span class="section-title__tagline">customer feedbacks</span>
+                                    <h2 class="section-title__title">what they’re talking about company?</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-one__right">
+                    <div class="testimonial-one__carousel owl-theme owl-carousel">
+                        <!--Testimonial One Single-->
+                        <div class="testimonial-one__single">
+                            <p class="testimonial-one__text" dir='rtl'> الشركة دي، عملت معانا حاجة زي الفل. الحملة التسويقية كانت مبتكرة وجذابة، وخلت منتجاتنا تبرز في السوق. بفضل خبرتهم، قدرنا نوصل لجمهور جديد تماماً، وكسبنا ثقتهم. بصراحة، أنا مبسوط جداً بالتعامل معاهم.</p>
+                            <div class="testimonial-one__client-info">
+                                <div class="testimonial-one__client-img">
+                                    <img src="{% static 'images/testimonial/ahmed.jpeg' %}" alt="" width="77" height="77">
+                                    <div class="testimonial-one__quote">
+                                        <img src="{% static 'images/testimonial/testimonial-one-quote.png' %}" alt="">
+                                    </div>
+                                </div>
+                                <div class="testimonial-one__client-details">
+                                    <h4 class="testimonial-one__client-name">Ahmed Abd El-Salam</h4>
+                                    <p class="testimonial-one__client-title">Pizza Land</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Testimonial One Single-->
+                        <div class="testimonial-one__single">
+                            <p class="testimonial-one__text" dir='rtl'>"وده" مش مجرد شركة تسويق، دول شركاء نجاح. الحملة اللي عملوها كانت مدروسة كويس، وكل كلمة فيها كانت في محلها. بفضل خبرتهم، قدرنا نزيد مبيعاتنا بشكل ملحوظ، وكسبنا ثقة عملاء جداد كتير.</p>
+                            <div class="testimonial-one__client-info">
+                                <div class="testimonial-one__client-img">
+                                    <img src="{% static 'images/testimonial/testimonial-one-client-img-2.jpg' %}" alt="">
+                                    <div class="testimonial-one__quote">
+                                        <img src="{% static 'images/testimonial/testimonial-one-quote.png' %}" alt="">
+                                    </div>
+                                </div>
+                                <div class="testimonial-one__client-details">
+                                    <h4 class="testimonial-one__client-name">Mahmoud Mounir</h4>
+                                    <p class="testimonial-one__client-title">Hulk Gym</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Testimonial One Single-->
+                        <div class="testimonial-one__single">
+                            <p class="testimonial-one__text" dir='rtl' >أنا مبسوط جداً بالتعامل مع شركة "ودة". فريق العمل بتاعهم متعاون جداً ومحترف، دايماً مستعدين يساعدوا في أي وقت. الحملة اللي عملوها كانت مدروسة كويس، ونقدر نقول إن كل جنيه صرفناه كان في مكانه الصح. النتائج اللي حققناها كانت فوق التوقعات، وبصراحة، ده كله بفضل خبرتهم.</p>
+                            <div class="testimonial-one__client-info">
+                                <div class="testimonial-one__client-img">
+                                    <img src="https://ksa-egypt.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-02-at-4.46.59-PM-edited.jpeg" alt="" width="77" height="77">
+                                    <div class="testimonial-one__quote">
+                                        <img src="{% static 'images/testimonial/testimonial-one-quote.png' %}" alt="">
+                                    </div>
+                                </div>
+                                <div class="testimonial-one__client-details">
+                                    <h4 class="testimonial-one__client-name">Khalid Waked</h4>
+                                    <p class="testimonial-one__client-title">KSA Industries</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="owl-theme">
+                    <div class="owl-controls">
+                        <div class="custom-nav owl-nav"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!--Testimonial One End-->
+
+        <!--Wedda Ready Start-->
+        <section class="qutiiz-ready">
+            <div class="qutiiz-ready-bg-box">
+                <div class="qutiiz-ready-bg jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
+                    style="background-image: url('https://images.pexels.com/photos/5716032/pexels-photo-5716032.jpeg?cs=srgb&dl=pexels-artempodrez-5716032.jpg&fm=jpg&h=1065&w=1894&fit=crop')"></div>
+            </div>
+            <div class="container">
+                <div class="qutiiz-ready__inner">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="cta-one__inner wow fadeInUp" data-wow-delay="100ms" data-wow-duration="2500ms">
+                                <div class="cta-one-shape-1"></div>
+                                <div class="cta-one-shape-2"></div>
+                                <div class="cta-one-shape-3"></div>
+                                <div class="cta-one__left">
+                                    <h2 class="cta-one__title">the passion trying & skill can make <br> a top-performing
+                                        company</h2>
+                                </div>
+                                <div class="cta-one__right">
+                                    <a aria-label="Chat on WhatsApp" href="https://wa.me/201115424261"><img alt="Chat on WhatsApp" src="{% static 'images/WhatsAppButtonWhiteMedium.png' %}" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Wedda Ready End-->
+
+        <!--Site Footer Start-->
+        <footer class="site-footer">
+            <div class="site-footer__top">
+                <div class="container">
+                    <div class="site-footer__top-inner">
+                        <div class="site-footer__top-left">
+                            <div class="site-footer__top-logo">
+                                <a href="index.html"><img src="{% static 'images/resources/footer-logo.png' %}" alt=""></a>
+                            </div>
+                            <div class="site-footer__top-title-box">
+                                <h3 class="site-footer__top-title">Let's work together just drop us a line - <a
+                                        href="mailto:info@wedda.agency">info@wedda.agency</a></h3>
+                            </div>
+                        </div>
+                        <div class="site-footer__top-right">
+                            <div class="site-footer__top-right-social">
+                                <a href="https://www.facebook.com/people/Wedda-Marketing-Agency/61569505623570/"><i class="fab fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/wedda_marketing_agency"><i class="fab fa-instagram"></i></a>
+                                <a href="https://x.com/wedda_agency"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.pinterest.com/WeddaAgency1/"><i class="fab fa-pinterest-p"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-footer__middle">
+                <div class="site-footer-shape"
+                    style="background-image: url({% static 'images/shapes/site-footer-shape.png' %})"></div>
+                <div class="container">
+                    <div class="site-footer__middle-inner">
+                        <div class="row">
+                            <div class="animated col-lg-6 col-md-6 col-xl-4 fadeInUp wow" data-wow-delay="100ms">
+                                <div class="footer-widget__column footer-widget__about">
+                                    <h3 class="footer-widget__title">About</h3>
+                                    <div class="footer-widget__about-text-box">
+                                        <p class="footer-widget__about-text">Ignite Your Brand. Elevate Your Reach. We craft innovative strategies that deliver measurable results.</p>
+                                    </div>
+                                    <ul class="footer-widget__about-contact list-unstyled">
+                                        <li>
+                                            <div class="icon">
+                                                <i class="fas fa-phone-square-alt"></i>
+                                            </div>
+                                            <div class="text">
+                                                <a href="tel:+201115424261">0111 542 4261</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon">
+                                                <i class="fas fa-envelope"></i>
+                                            </div>
+                                            <div class="text">
+                                                <a href="mailto:info@wedda.agency">info@wedda.agency</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                                <div class="footer-widget__column footer-widget__explore clearfix">
+                                    <h3 class="footer-widget__title">Explore</h3>
+                                    <ul class="footer-widget__explore-list list-unstyled clearfix">
+                                        <li><a href="#home">Home</a></li>
+                                        <li><a href="#about">About</a></li>
+                                        <li><a href="#services">Services</a></li>
+                                        <li><a href="#showcase">Showcase</a></li>
+                                        <li><a href="#testimonial">Testimonial</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-5 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                                <div class="footer-widget__column footer-widget__newsletter">
+                                    <h3 class="footer-widget__title">Newsletter</h3>
+                                    <form class="footer-widget__newsletter-form" method="POST" action="{% url 'index' %}">
+                                        <div class="footer-widget__newsletter-input-box">
+                                            <input type="email" placeholder="Email address" name="email">
+                                            <button type="submit" class="footer-widget__newsletter-btn">
+                                                <i class="far fa-paper-plane"></i>
+                                            </button>
+                                        </div>
+                                    </form>
+                                    <div class="footer-widget__newsletter-bottom">
+                                        <div class="footer-widget__newsletter-bottom-icon">
+                                            <i class="fa fa-check"></i>
+                                        </div>
+                                        <div class="footer-widget__newsletter-bottom-text">
+                                            <p>I agree to all your terms and policies</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="site-footer__bottom">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="site-footer__bottom-inner">
+                                    <div class="site-footer__bottom-left">
+                                        <p class="site-footer__bottom-text">© Copyrights, 2025 <a
+                                                href="{% url 'index' %}">Wedda Agency</a></p>
+                                    </div>
+                                    <div class="site-footer__bottom-right">
+                                        <ul class="list-unstyled site-footer__bottom-menu">
+                                            <li><a href="#">Terms & Conditions</a></li>
+                                            <li><a href="#">Privacy Policy</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--Site Footer End-->
+
+
+    </div><!-- /.page-wrapper -->
+
+
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <!-- /.mobile-nav__overlay -->
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+
+            <div class="logo-box">
+                <a href="index.html" aria-label="logo image"><img src="{% static 'images/resources/logo.png' %}" width="155"
+                        alt="" /></a>
+            </div>
+            <!-- /.logo-box -->
+            <div class="mobile-nav__container"></div>
+            <!-- /.mobile-nav__container -->
+
+            <ul class="mobile-nav__contact list-unstyled">
+                <li>
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:info@wedda.agency">info@wedda.agency</a>
+                </li>
+                <li>
+                    <i class="fa fa-phone-alt"></i>
+                    <a href="tel:+201115424261">0111 542 4261</a>
+                </li>
+            </ul><!-- /.mobile-nav__contact -->
+            <div class="mobile-nav__top">
+                <div class="mobile-nav__social">
+                    <a href="https://x.com/wedda_agency" class="fab fa-twitter"></a>
+                    <a href="https://www.facebook.com/people/Wedda-Marketing-Agency/61569505623570/" class="fab fa-facebook-square"></a>
+                    <a href="https://www.pinterest.com/WeddaAgency1/" class="fab fa-pinterest-p"></a>
+                    <a href="https://www.instagram.com/wedda_marketing_agency" class="fab fa-instagram"></a>
+                </div><!-- /.mobile-nav__social -->
+            </div><!-- /.mobile-nav__top -->
+        </div>
+        <!-- /.mobile-nav__content -->
+    </div>
+    <!-- /.mobile-nav__wrapper -->
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
+    
+    
+    {% comment %} <script src="{% static 'vendors/jquery/jquery-3.6.0.min.js' %}"></script> {% endcomment %}
+    {% comment %} <script src="{% static 'vendors/bootstrap/js/bootstrap.bundle.min.js' %}"></script> {% endcomment %}
+    {% comment %} <script src="{% static 'vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js' %}"></script> {% endcomment %}
+    {% comment %} <script src="{% static 'vendors/wow/wow.js' %}"></script> {% endcomment %}
+    {% comment %} <script src="{% static 'vendors/vegas/vegas.min.js' %}"></script> {% endcomment %}
+    {% comment %} <script src="{% static 'vendors/jquery-ui/jquery-ui.js' %}"></script> {% endcomment %}
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jarallax@2.2.1/dist/jarallax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ajaxchimp@1.3.0/jquery.ajaxchimp.min.js"></script>
+    <script src="{% static 'vendors/jquery-appear/jquery.appear.min.js' %}"></script>
+    <script src="{% static 'vendors/jquery-circle-progress/jquery.circle-progress.min.js' %}"></script>
+    <script src="{% static 'vendors/jquery-magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'vendors/jquery-validate/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'vendors/nouislider/nouislider.min.js' %}"></script>
+    <script src="{% static 'vendors/odometer/odometer.min.js' %}"></script>
+    <script src="{% static 'vendors/swiper/swiper.min.js' %}"></script>
+    <script src="{% static 'vendors/tiny-slider/tiny-slider.min.js' %}"></script>
+    <script src="{% static 'vendors/wnumb/wNumb.min.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
+    <script src="{% static 'vendors/isotope/isotope.js' %}"></script>
+    <script src="{% static 'vendors/countdown/countdown.min.js' %}"></script>
+    <script src="{% static 'vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'vendors/bxslider/jquery.bxslider.min.js' %}"></script>
+    <script src="{% static 'vendors/bootstrap-select/js/bootstrap-select.min.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vegas@2.4.4/dist/vegas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-ui@1.14.1/dist/jquery-ui.min.js"></script>
+    <script src="{% static 'vendors/timepicker/timePicker.js' %}"></script>
+
+    <!-- template js -->
+    <script src="{% static 'js/qutiiz.js' %}"></script>
+</body>
+
+</html>

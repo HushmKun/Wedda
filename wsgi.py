@@ -1,0 +1,1 @@
+from wedda.wsgi import application

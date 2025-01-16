@@ -1,0 +1,346 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wedda Marketing Agency</title>
+    
+    <!-- favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicon/apple-touch-icon.png' %}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon/favicon-32x32.png' %}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicons/favicon-16x16.png' %}" />
+    <link rel="manifest" href="{% static 'images/favicon/site.webmanifest' %}" />
+
+    {% comment %} ! HAVE A SECOND LOOK  {% endcomment %}
+    <!-- SEO -->
+    <meta name="description" content="Wedda Marketing Agency: We help businesses grow with data-driven digital marketing strategies. Get expert SEO, PPC, social media, and content marketing services. Contact us today!">
+    <meta name="keywords" content="marketing agency, digital marketing, SEO, PPC, social media marketing, content marketing, web design">
+    <meta name="robots" content="index, nofollow">
+
+    <meta property="og:title" content="Wedda Marketing Agency - Grow Your Business Online">
+    <meta property="og:description" content="Expert digital marketing services to boost your online presence and drive results.">
+    <meta property="og:image" content="https://wedda.agency/static/images/wedda-logo-social.jpg">
+    <meta property="og:url" content="https://wedda.agency/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Wedda Marketing Agency">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Wedda Marketing Agency - Your Digital Marketing Partner">
+    <meta name="twitter:description" content="We deliver results-driven marketing strategies to elevate your brand.">
+    <meta name="twitter:image" content="https://wedda.agency/images/wedda-twitter-card.jpg">
+    <meta name="twitter:site" content="@WeddaAgency">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+
+        {% comment %} <link rel="stylesheet" href="{% static 'vendors/bootstrap/css/bootstrap.min.css' %}" /> {% endcomment %}
+        {% comment %} <link rel="stylesheet" href="{% static 'vendors/jarallax/jarallax.css' %}" /> {% endcomment %}
+        {% comment %} <link rel="stylesheet" href="{% static 'vendors/jquery-ui/jquery-ui.css' %}" /> {% endcomment %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jarallax@2.2.1/dist/jarallax.min.css">
+
+    <link rel="stylesheet" href="{% static 'vendors/animate/animate.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/animate/custom-animate.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/fontawesome/css/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/jquery-magnific-popup/jquery.magnific-popup.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/nouislider/nouislider.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/nouislider/nouislider.pips.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/odometer/odometer.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/swiper/swiper.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/qutiiz-icons/style.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/qutiiz-icons-two/style.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/tiny-slider/tiny-slider.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/reey-font/stylesheet.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.theme.default.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/bxslider/jquery.bxslider.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/bootstrap-select/css/bootstrap-select.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/vegas/vegas.min.css' %}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-ui@1.14.1/themes/base/theme.min.css" />
+    <link rel="stylesheet" href="{% static 'vendors/timepicker/timePicker.css' %}" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="{% static 'css/qutiiz.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/qutiiz-responsive.css' %}" />
+</head>
+
+<body>
+    <div class="preloader">
+        <img class="preloader__image" width="60" src="{% static 'images/loader.png' %}" alt="" />
+    </div>
+    <!-- /.preloader -->
+    <div class="page-wrapper">
+        <header class="main-header clearfix">
+            <nav class="main-menu clearfix">
+                <div class="main-menu-wrapper clearfix">
+                    <div class="main-menu-wrapper__left">
+                        <div class="main-menu-wrapper__logo">
+                            <a href="{% url 'index' %}"><img src="{% static 'images/resources/logo.png' %}" alt="" style="max-width:100px;"></a>
+                        </div>
+                        <div class="main-menu-wrapper__main-menu">
+                            <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                            <ul class="main-menu__list one-page-scroll-menu">
+                                <li class="current megamenu scrollToLink">
+                                    <a href="#home">Home </a>
+                                </li>
+                                <li class="scrollToLink">
+                                    <a href="#about">About </a>
+                                </li>
+                                <li class="scrollToLink">
+                                    <a href="#services">Services</a>
+                                </li>
+                                <li class="scrollToLink">
+                                    <a href="#showcase">Work showcase</a>
+                                </li>
+                                <li class="scrollToLink">
+                                    <a href="#testimonial">Testimonial</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="main-menu-wrapper__right">
+                        <div class="main-menu-wrapper__search-box">
+                            <a href="{% url 'admin:index' %}" class="main-menu-wrapper__search icon-right-arrow"></a>
+                        </div>
+                        <div class="main-menu-wrapper__call">
+                            <div class="main-menu-wrapper__call-icon">
+                                <span class="icon-chatting"></span>
+                            </div>
+                            <div class="main-menu-wrapper__call-number">
+                                <p>Call Anytime</p>
+                                <h5><a href="tel:+201115424261">0111 542 4261</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="stricky-header stricked-menu main-menu">
+            <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
+        </div><!-- /.stricky-header -->
+
+        <!--Error Page Start-->
+        <section class="error-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="error-page__inner">
+                            <h2 class="error-page__title">400</h2>
+                            <h3 class="error-page__tagline">Sorry, Something is Wrong!</h3>
+                            <p class="error-page__text">Try restarting your device or refreshing the page.</p>
+                            <form class="error-page__form">
+                                <div class="error-page__form-input">
+                                    <input type="search" placeholder="Search here">
+                                    <button type="submit"><i class="icon-magnifying-glass"></i></button>
+                                </div>
+                            </form>
+                            <a href="{% url 'index' %}" class="thm-btn error-page__btn">go back to home</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Error Page End-->
+
+    <!--Site Footer Start-->
+            <footer class="site-footer">
+                <div class="site-footer__top">
+                    <div class="container">
+                        <div class="site-footer__top-inner">
+                            <div class="site-footer__top-left">
+                                <div class="site-footer__top-logo">
+                                    <a href="index.html"><img src="{% static 'images/resources/footer-logo.png' %}" alt=""></a>
+                                </div>
+                                <div class="site-footer__top-title-box">
+                                    <h3 class="site-footer__top-title">Let's work together just drop us a line - <a
+                                            href="mailto:info@wedda.agency">info@wedda.agency</a></h3>
+                                </div>
+                            </div>
+                            <div class="site-footer__top-right">
+                                <div class="site-footer__top-right-social">
+                                    <a href="https://www.facebook.com/people/Wedda-Marketing-Agency/61569505623570/"><i class="fab fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/wedda_marketing_agency"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://x.com/wedda_agency"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://www.pinterest.com/WeddaAgency1/"><i class="fab fa-pinterest-p"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="site-footer__middle">
+                    <div class="site-footer-shape"
+                        style="background-image: url({% static 'images/shapes/site-footer-shape.png' %})"></div>
+                    <div class="container">
+                        <div class="site-footer__middle-inner">
+                            <div class="row">
+                                <div class="animated col-lg-6 col-md-6 col-xl-4 fadeInUp wow" data-wow-delay="100ms">
+                                    <div class="footer-widget__column footer-widget__about">
+                                        <h3 class="footer-widget__title">About</h3>
+                                        <div class="footer-widget__about-text-box">
+                                            <p class="footer-widget__about-text">Ignite Your Brand. Elevate Your Reach. We craft innovative strategies that deliver measurable results.</p>
+                                        </div>
+                                        <ul class="footer-widget__about-contact list-unstyled">
+                                            <li>
+                                                <div class="icon">
+                                                    <i class="fas fa-phone-square-alt"></i>
+                                                </div>
+                                                <div class="text">
+                                                    <a href="tel:+201115424261">0111 542 4261</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="icon">
+                                                    <i class="fas fa-envelope"></i>
+                                                </div>
+                                                <div class="text">
+                                                    <a href="mailto:info@wedda.agency">info@wedda.agency</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                                    <div class="footer-widget__column footer-widget__explore clearfix">
+                                        <h3 class="footer-widget__title">Explore</h3>
+                                        <ul class="footer-widget__explore-list list-unstyled clearfix">
+                                            <li><a href="#home">Home</a></li>
+                                            <li><a href="#about">About</a></li>
+                                            <li><a href="#services">Services</a></li>
+                                            <li><a href="#showcase">Showcase</a></li>
+                                            <li><a href="#testimonial">Testimonial</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xl-5 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                                    <div class="footer-widget__column footer-widget__newsletter">
+                                        <h3 class="footer-widget__title">Newsletter</h3>
+                                        <form class="footer-widget__newsletter-form" method="POST" action="{% url 'index' %}">
+                                            <div class="footer-widget__newsletter-input-box">
+                                                <input type="email" placeholder="Email address" name="email">
+                                                <button type="submit" class="footer-widget__newsletter-btn">
+                                                    <i class="far fa-paper-plane"></i>
+                                                </button>
+                                            </div>
+                                        </form>
+                                        <div class="footer-widget__newsletter-bottom">
+                                            <div class="footer-widget__newsletter-bottom-icon">
+                                                <i class="fa fa-check"></i>
+                                            </div>
+                                            <div class="footer-widget__newsletter-bottom-text">
+                                                <p>I agree to all your terms and policies</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="site-footer__bottom">
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div class="site-footer__bottom-inner">
+                                        <div class="site-footer__bottom-left">
+                                            <p class="site-footer__bottom-text">© Copyrights, 2025 <a
+                                                    href="{% url 'index' %}">Wedda Agency</a></p>
+                                        </div>
+                                        <div class="site-footer__bottom-right">
+                                            <ul class="list-unstyled site-footer__bottom-menu">
+                                                <li><a href="#">Terms & Conditions</a></li>
+                                                <li><a href="#">Privacy Policy</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!--Site Footer End-->
+
+
+    </div><!-- /.page-wrapper -->
+
+
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <!-- /.mobile-nav__overlay -->
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+
+            <div class="logo-box">
+                <a href="index.html" aria-label="logo image"><img src="{% static 'images/resources/logo.png' %}" width="155"
+                        alt="" /></a>
+            </div>
+            <!-- /.logo-box -->
+            <div class="mobile-nav__container"></div>
+            <!-- /.mobile-nav__container -->
+
+            <ul class="mobile-nav__contact list-unstyled">
+                <li>
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:info@wedda.agency">info@wedda.agency</a>
+                </li>
+                <li>
+                    <i class="fa fa-phone-alt"></i>
+                    <a href="tel:+201115424261">0111 542 4261</a>
+                </li>
+            </ul><!-- /.mobile-nav__contact -->
+            <div class="mobile-nav__top">
+                <div class="mobile-nav__social">
+                    <a href="https://x.com/wedda_agency" class="fab fa-twitter"></a>
+                    <a href="https://www.facebook.com/people/Wedda-Marketing-Agency/61569505623570/" class="fab fa-facebook-square"></a>
+                    <a href="https://www.pinterest.com/WeddaAgency1/" class="fab fa-pinterest-p"></a>
+                    <a href="https://www.instagram.com/wedda_marketing_agency" class="fab fa-instagram"></a>
+                </div><!-- /.mobile-nav__social -->
+            </div><!-- /.mobile-nav__top -->
+        </div>
+        <!-- /.mobile-nav__content -->
+    </div>
+    <!-- /.mobile-nav__wrapper -->
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jarallax@2.2.1/dist/jarallax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ajaxchimp@1.3.0/jquery.ajaxchimp.min.js"></script>
+    <script src="{% static 'vendors/jquery-appear/jquery.appear.min.js' %}"></script>
+    <script src="{% static 'vendors/jquery-circle-progress/jquery.circle-progress.min.js' %}"></script>
+    <script src="{% static 'vendors/jquery-magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'vendors/jquery-validate/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'vendors/nouislider/nouislider.min.js' %}"></script>
+    <script src="{% static 'vendors/odometer/odometer.min.js' %}"></script>
+    <script src="{% static 'vendors/swiper/swiper.min.js' %}"></script>
+    <script src="{% static 'vendors/tiny-slider/tiny-slider.min.js' %}"></script>
+    <script src="{% static 'vendors/wnumb/wNumb.min.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
+    <script src="{% static 'vendors/isotope/isotope.js' %}"></script>
+    <script src="{% static 'vendors/countdown/countdown.min.js' %}"></script>
+    <script src="{% static 'vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'vendors/bxslider/jquery.bxslider.min.js' %}"></script>
+    <script src="{% static 'vendors/bootstrap-select/js/bootstrap-select.min.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vegas@2.4.4/dist/vegas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-ui@1.14.1/dist/jquery-ui.min.js"></script>
+    <script src="{% static 'vendors/timepicker/timePicker.js' %}"></script>
+
+
+
+
+    <!-- template js -->
+    <script src="{% static 'js/qutiiz.js' %}"></script>
+</body>
+
+</html>
