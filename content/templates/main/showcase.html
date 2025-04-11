@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        <!--Page Header Start-->
+        <section class="page-header">
+            <div class="page-header-bg" style="background-image: url(https://images.pexels.com/photos/6345328/pexels-photo-6345328.jpeg?cs=srgb&dl=pexels-karolina-grabowska-6345328.jpg&fm=jpg&w=1920&h=1280)">
+            </div>
+            <div class="page-header-border"></div>
+            <div class="page-header-border page-header-border-two"></div>
+            <div class="page-header-border page-header-border-three"></div>
+            <div class="page-header-border page-header-border-four"></div>
+            <div class="page-header-border page-header-border-five"></div>
+            <div class="page-header-border page-header-border-six"></div>
+
+            <div class="page-header-shape-1"></div>
+            <div class="page-header-shape-2"></div>
+            <div class="page-header-shape-3"></div>
+
+            <div class="container">
+                <div class="page-header__inner">
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li class="active">projects</li>
+                    </ul>
+                    <h2>projects</h2>
+                </div>
+            </div>
+        </section>
+        <!--Page Header End-->
+
+        <!--Projects Page Start-->
+        <section class="projects-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <ul class="project-filter style1 post-filter has-dynamic-filters-counter list-unstyled">
+                            <li data-filter=".filter-item" class="active"><span class="filter-text">All</span></li>
+                            {% for tag in tags %}
+                                <li data-filter=".{{ tag.slug }}"><span class="filter-text">{{ tag.name }}</span></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="row filter-layout">
+                    {% for project in projects %}
+                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item {{ project.category.slug }} {% for tag in project.tags.all %} {{ tag.slug }} {% endfor %}">
+                            <!--Portfolio One Single-->
+                            <div class="project-one__single">
+                                <div class="project-one__img">
+                                    <img src="{{ project.thumb.url }}" alt="">
+                                    <div class="project-one__hover">
+                                        <p class="project-one__tagline">{{ project.category.name|title }}</p>
+                                        <h3 class="project-one__title"><a href="{{ project.get_absolute_url }}">{{ project.name }}</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        <!--Projects Page End-->
+{% endblock content %}

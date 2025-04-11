@@ -1,0 +1,174 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+        <!--Page Header Start-->
+        <section class="page-header">
+            <div class="page-header-bg" style="background-image: url(https://images.pexels.com/photos/7947842/pexels-photo-7947842.jpeg?cs=srgb&dl=pexels-rdne-7947842.jpg&fm=jpg&w=1920&h=1280)">
+            </div>
+            <div class="page-header-border"></div>
+            <div class="page-header-border page-header-border-two"></div>
+            <div class="page-header-border page-header-border-three"></div>
+            <div class="page-header-border page-header-border-four"></div>
+            <div class="page-header-border page-header-border-five"></div>
+            <div class="page-header-border page-header-border-six"></div>
+
+            <div class="page-header-shape-1"></div>
+            <div class="page-header-shape-2"></div>
+            <div class="page-header-shape-3"></div>
+
+            <div class="container">
+                <div class="page-header__inner">
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="active">projects</li>
+                    </ul>
+                    <h2>project Details</h2>
+                </div>
+            </div>
+        </section>
+        <!--Page Header End-->
+
+        <!--Project Details Start-->
+        <section class="project-details">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="project-details__img">
+                            <img src="{{ project.img.url }}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="project-details__content">
+                    <div class="row">
+                        <div class="col-xl-8 col-lg-7">
+                            <div class="project-details__content-left">
+                                <h3 class="project-details__content-title">{{ project.name }}</h3>
+                                <p class="project-details__content-text-1">{{ project.paragraph_1 }}</p>
+                                <p class="project-details__content-text-2">{{ project.paragraph_2 }}</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-5">
+                            <div class="project-details__content-right">
+                                <div class="project-details__details-box">
+                                    <div class="project-details__details-info">
+                                        <div class="project-details__details-info-single">
+                                            <h5 class="project-details__details-info-client">Clients:</h5>
+                                            <p class="project-details__details-info-name">{{ project.client }}</p>
+                                        </div>
+                                        <div class="project-details__details-info-single">
+                                            <h5 class="project-details__details-info-client">Category:</h5>
+                                            <p class="project-details__details-info-name">{{ project.category.name|title }}</p>
+                                        </div>
+                                        <div class="project-details__details-info-single">
+                                            <h5 class="project-details__details-info-client">Date:</h5>
+                                            <p class="project-details__details-info-name">{{ project.date }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-12 col-lg-12 mt-4">
+                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                {% for image in project.images.all %}
+                                    <div class="carousel-item {% if forloop.first %} active {% endif %}" style="max-width: 1920px; max-height:1080px">
+                                        <img src="{{ image.image.url }}" class="d-block w-100" alt="...">
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="project-details__pagination-box">
+                            <ul class="project-details__pagination list-unstyled">
+                                {% if prev_item %}
+                                <li class="next">
+                                    <p class="project-details__pagination-sub-title">Previous project</p>
+                                    <a href="{{ prev_item.get_absolute_url }}" aria-label="Previous">
+                                        <span class="project-details__pagination-title">{{ prev_item.name|title }}</span>
+                                        <i class="icon-right-arrow"></i>
+                                    </a>
+                                </li>
+                                {% endif %}
+                                {% if next_item %}
+                                <li class="previous">
+                                    <p class="project-details__pagination-sub-title text-end">next project</p>
+                                    <a href="{{ next_item.get_absolute_url }}" aria-label="Next">
+                                        <span class="project-details__pagination-title">{{ next_item|title }}</span>
+                                        <i class="icon-right-arrow"></i>
+                                    </a>
+                                </li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Project Details End-->
+
+        {% comment %} <!--Similar Work Start-->
+        <section class="similar-work">
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="section-title__tagline">recent projects</span>
+                    <h2 class="section-title__title">similar projects</h2>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4">
+                        <!--Portfolio One Single-->
+                        <div class="project-one__single">
+                            <div class="project-one__img">
+                                <img src="assets/images/resources/project-page-img-4.jpg" alt="">
+                                <div class="project-one__hover">
+                                    <p class="project-one__tagline">Graphic</p>
+                                    <h3 class="project-one__title"><a href="project-details.html">Fimlor Experience</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4">
+                        <!--Portfolio One Single-->
+                        <div class="project-one__single">
+                            <div class="project-one__img">
+                                <img src="assets/images/resources/project-page-img-5.jpg" alt="">
+                                <div class="project-one__hover">
+                                    <p class="project-one__tagline">Graphic</p>
+                                    <h3 class="project-one__title"><a href="project-details.html">Fimlor Experience</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4">
+                        <!--Portfolio One Single-->
+                        <div class="project-one__single">
+                            <div class="project-one__img">
+                                <img src="assets/images/resources/project-page-img-6.jpg" alt="">
+                                <div class="project-one__hover">
+                                    <p class="project-one__tagline">Graphic</p>
+                                    <h3 class="project-one__title"><a href="project-details.html">Fimlor Experience</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Similar Work End--> {% endcomment %}
+{% endblock content %}

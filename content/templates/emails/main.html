@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رسالة</title>
+    <style>
+        *{
+            direction: rtl;
+        }
+    </style>
+</head>
+<body>
+    <p style="font-family: Helvetica, sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 16px;">أهلا محمود،</p>
+    <p style="font-family: Helvetica, sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 16px;">أحدهم يتواصل معك عن طريق الموقع الخاص بك.</p>
+    <p style="font-family: Helvetica, sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 16px;">اسم الشخص: {{ user.name }}</p>
+    <p style="font-family: Helvetica, sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 16px;">رقم الشخص: {{ user.phone }}</p>
+    <p style="font-family: Helvetica, sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 16px;">إيميل الشخص: {{ user.email }}</p>
+    <p style="font-family: Helvetica, sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 16px;">موضوع الرسالة: {{ user.subject }}</p>
+    <p style="font-family: Helvetica, sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 16px;">محتوي الرسالة: {{ user.message }}</p>    
+</body>
+</html>

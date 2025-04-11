@@ -1,0 +1,209 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+        <!--Page Header Start-->
+        <section class="page-header">
+            <div class="page-header-bg" style="background-image: url(https://images.pexels.com/photos/599982/pexels-photo-599982.jpeg?cs=srgb&dl=pexels-kstupak-599982.jpg&fm=jpg&w=1920&h=1272)">
+            </div>
+            <div class="page-header-border"></div>
+            <div class="page-header-border page-header-border-two"></div>
+            <div class="page-header-border page-header-border-three"></div>
+            <div class="page-header-border page-header-border-four"></div>
+            <div class="page-header-border page-header-border-five"></div>
+            <div class="page-header-border page-header-border-six"></div>
+
+            <div class="page-header-shape-1"></div>
+            <div class="page-header-shape-2"></div>
+            <div class="page-header-shape-3"></div>
+
+            <div class="container">
+                <div class="page-header__inner">
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li class="active">pages</li>
+                    </ul>
+                    <h2>about us</h2>
+                </div>
+            </div>
+        </section>
+        <!--Page Header End-->
+
+        <!--About Page Start-->
+        <section class="about-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="about-page__left">
+                            <div class="about-page__img">
+                                <img src="{% static 'images/resources/about.png' %}" alt=""> 
+                            </div>
+                            <div class="about-page__founded">
+                                <h5>Founded <br> in 2023</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="about-page__right">
+                            <div class="section-title text-left">
+                                <span class="section-title__tagline">read about us</span>
+                                <h2 class="section-title__title">get to know about Wedda Marketing agency solutions</h2>
+                            </div>
+                            <p class="about-page__right-text-1">We’re committed to delivering the best digital marketing
+                                for your businesses</p>
+                            <p class="about-page__right-text-2">
+                                Found in 2023, Wedda Marketing Agency focuses on client digital success with a comprehensive range of innovative & data-driven digital marketing solutions, ensuring measurable results: SEO, social, websites, content & more.
+                            </p>
+                            <div class="about-page__points-box">
+                                <ul class="list-unstyled about-page__points">
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-draw-check-mark"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p>Develop a vision statement</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-draw-check-mark"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p>Grow your customer base</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled about-page__points about-page__points-two">
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-draw-check-mark"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p>Increase your monthly sales</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-draw-check-mark"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p>Beat your competition</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--About Page End-->
+
+        <!--Counter Two Start-->
+        <section class="counter-two about-page-counter-two">
+            <div class="container">
+                <div class="counter-two__inner wow fadeInUp" data-wow-delay="100ms" data-wow-duration="2500ms">
+                    <div class="counter-two-shape1"></div>
+                    <div class="counter-two-shape2"></div>
+                    <div class="counter-two-shape3"></div>
+                    <div class="row">
+                        <div class="col-xl-4">
+                            <div class="counter-two__left">
+                                <h2 class="counter-two__title">Let’s Start Your <br> Project with <br> Wedda</h2>
+                            </div>
+                        </div>
+                        <div class="col-xl-8">
+                            <div class="counter-two__right">
+                                <ul class="list-unstyled counter-two__list">
+                                    <li class="counter-two__single wow fadeInUp" data-wow-delay="100ms">
+                                        <div class="counter-two__icon">
+                                            <span class="icon-checking"></span>
+                                        </div>
+                                        <h3 class="odometer" data-count="{{ projects }}">00</h3>
+                                        <p class="counter-two__text">Projects Completed</p>
+                                    </li>
+                                    <li class="counter-two__single wow fadeInUp" data-wow-delay="100ms">
+                                        <div class="counter-two__icon">
+                                            <span class="icon-recommend"></span>
+                                        </div>
+                                        <h3 class="odometer" data-count="{{ clients }}">00</h3>
+                                        <p class="counter-two__text">Satisfied Clients</p>
+                                    </li>
+                                    <li class="counter-two__single wow fadeInUp" data-wow-delay="100ms">
+                                        <div class="counter-two__icon">
+                                            <span class="icon-consulting"></span>
+                                        </div>
+                                        <h3 class="odometer" data-count="{{ teams }}">00</h3>
+                                        <p class="counter-two__text">Expert Teams</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Counter Two End-->
+
+        <!--Qutiiz Ready Two-->
+        <section class="qutiiz-ready-two">
+            <div class="qutiiz-ready-two-bg-box">
+                <div class="qutiiz-ready-two-bg jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
+                    style="background-image: url(https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?cs=srgb&dl=pexels-fauxels-3183150.jpg&fm=jpg&w=1920&h=1281)"></div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="qutiiz-ready-two__inner">
+                            <h2 class="qutiiz-ready-two__title">Wedda is a ready to protect <br> your businesses</h2>
+                            <a href="about.html" class="qutiiz-ready-two__btn thm-btn">Discover more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Qutiiz Ready End-->
+
+        <!--Testimonial Two Start-->
+        <section class="testimonial-two clearfix">
+            <div class="testimonial-two-map"
+                style="background-image: url({% static 'images/shapes/testimonial-two-map.png' %})"></div>
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="section-title__tagline">customer feedbacks</span>
+                    <h2 class="section-title__title">what they’re talking</h2>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="testimonial-two__carousel owl-theme owl-carousel">
+                            {% for testimonial in testimonials %}
+                            <!--Testimonial One Single-->
+                            <div class="testimonial-one__single">
+                                <p class="testimonial-one__text" dir="rtl">
+                                    {{ testimonial.text}}
+                                </p>
+                                <div class="testimonial-one__client-info">
+                                    <div class="testimonial-one__client-img">
+                                        <img src="{{ testimonial.image.url }}" alt="">
+                                        <div class="testimonial-one__quote">
+                                            <img src="{% static 'images/testimonial/testimonial-one-quote.png' %}" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-one__client-details">
+                                        <h4 class="testimonial-one__client-name">{{ testimonial.name }}</h4>
+                                        <p class="testimonial-one__client-title">{{ testimonial.position}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Testimonial One Single End-->
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Testimonial Two End-->
+{% endblock content %}
+
+
+

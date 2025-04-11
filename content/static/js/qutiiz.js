@@ -379,40 +379,40 @@
     });
   }
 
-  if ($(".contact-form-validated").length) {
-    $(".contact-form-validated").validate({
-      // initialize the plugin
-      rules: {
-        name: {
-          required: true
-        },
-        email: {
-          required: true,
-          email: true
-        },
-        message: {
-          required: true
-        },
-        subject: {
-          required: true
-        }
-      },
-      submitHandler: function (form) {
-        // sending value with ajax request
-        $.post(
-          $(form).attr("action"),
-          $(form).serialize(),
-          function (response) {
-            $(form).parent().find(".result").append(response);
-            $(form).find('input[type="text"]').val("");
-            $(form).find('input[type="email"]').val("");
-            $(form).find("textarea").val("");
-          }
-        );
-        return false;
-      }
-    });
-  }
+  // if ($(".contact-form-validated").length) {
+  //   $(".contact-form-validated").validate({
+  //     // initialize the plugin
+  //     rules: {
+  //       name: {
+  //         required: true
+  //       },
+  //       email: {
+  //         required: true,
+  //         email: true
+  //       },
+  //       message: {
+  //         required: true
+  //       },
+  //       subject: {
+  //         required: true
+  //       }
+  //     },
+  //     submitHandler: function (form) {
+  //       // sending value with ajax request
+  //       $.post(
+  //         $(form).attr("action"),
+  //         $(form).serialize(),
+  //         function (response) {
+  //           $(form).parent().find(".result").append(response);
+  //           $(form).find('input[type="text"]').val("");
+  //           $(form).find('input[type="email"]').val("");
+  //           $(form).find("textarea").val("");
+  //         }
+  //       );
+  //       return false;
+  //     }
+  //   });
+  // }
 
   // mailchimp form
   if ($(".mc-form").length) {
@@ -484,37 +484,37 @@
     });
   }
 
-  function dynamicCurrentMenuClass(selector) {
-    let FileName = window.location.href.split("/").reverse()[0];
+  // function dynamicCurrentMenuClass(selector) {
+  //   let FileName = window.location.href.split("/").reverse()[0];
 
-    selector.find("li").each(function () {
-      let anchor = $(this).find("a");
-      if ($(anchor).attr("href") == FileName) {
-        $(this).addClass("current");
-      }
-    });
-    // if any li has .current elmnt add class
-    selector.children("li").each(function () {
-      if ($(this).find(".current").length) {
-        $(this).addClass("current");
-      }
-    });
-    // if no file name return
-    if ("" == FileName) {
-      selector.find("li").eq(0).addClass("current");
-    }
-  }
+  //   selector.find("li").each(function () {
+  //     let anchor = $(this).find("a");
+  //     if ($(anchor).attr("href") == FileName) {
+  //       $(this).addClass("current");
+  //     }
+  //   });
+  //   // if any li has .current elmnt add class
+  //   selector.children("li").each(function () {
+  //     if ($(this).find(".current").length) {
+  //       $(this).addClass("current");
+  //     }
+  //   });
+  //   // if no file name return
+  //   if ("" == FileName) {
+  //     selector.find("li").eq(0).addClass("current");
+  //   }
+  // }
 
-  if ($(".main-menu__list").length) {
-    // dynamic current class
-    let mainNavUL = $(".main-menu__list");
-    dynamicCurrentMenuClass(mainNavUL);
-  }
-  if ($(".service-details__sidebar-service-list").length) {
-    // dynamic current class
-    let mainNavUL = $(".service-details__sidebar-service-list");
-    dynamicCurrentMenuClass(mainNavUL);
-  }
+  // if ($(".main-menu__list").length) {
+  //   // dynamic current class
+  //   let mainNavUL = $(".main-menu__list");
+  //   dynamicCurrentMenuClass(mainNavUL);
+  // }
+  // if ($(".service-details__sidebar-service-list").length) {
+  //   // dynamic current class
+  //   let mainNavUL = $(".service-details__sidebar-service-list");
+  //   dynamicCurrentMenuClass(mainNavUL);
+  // }
 
   if ($(".main-menu__list").length && $(".mobile-nav__container").length) {
     let navContent = document.querySelector(".main-menu__list").outerHTML;
@@ -557,14 +557,14 @@
     });
   }
 
-  if ($(".search-toggler").length) {
-    $(".search-toggler").on("click", function (e) {
-      e.preventDefault();
-      $(".search-popup").toggleClass("active");
-      $(".mobile-nav__wrapper").removeClass("expanded");
-      $("body").toggleClass("locked");
-    });
-  }
+  // if ($(".search-toggler").length) {
+  //   $(".search-toggler").on("click", function (e) {
+  //     e.preventDefault();
+  //     $(".search-popup").toggleClass("active");
+  //     $(".mobile-nav__wrapper").removeClass("expanded");
+  //     $("body").toggleClass("locked");
+  //   });
+  // }
 
   if ($(".odometer").length) {
     var odo = $(".odometer");

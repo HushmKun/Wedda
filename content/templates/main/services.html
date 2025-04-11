@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+        <!--Page Header Start-->
+        <section class="page-header">
+            <div class="page-header-bg" style="background-image: url(https://images.pexels.com/photos/3184345/pexels-photo-3184345.jpeg?cs=srgb&dl=pexels-fauxels-3184345.jpg&fm=jpg&w=1920&h=1280)">
+            </div>
+            <div class="page-header-border"></div>
+            <div class="page-header-border page-header-border-two"></div>
+            <div class="page-header-border page-header-border-three"></div>
+            <div class="page-header-border page-header-border-four"></div>
+            <div class="page-header-border page-header-border-five"></div>
+            <div class="page-header-border page-header-border-six"></div>
+
+            <div class="page-header-shape-1"></div>
+            <div class="page-header-shape-2"></div>
+            <div class="page-header-shape-3"></div>
+
+            <div class="container">
+                <div class="page-header__inner">
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li class="active">Services</li>
+                    </ul>
+                    <h2>Services</h2>
+                </div>
+            </div>
+        </section>
+        <!--Page Header End-->
+
+        <!--Start Services Three-->
+        <section class="services-three">
+            <div class="container">
+                <div class="row">
+                    {% for element in services %}
+                    <!--Start Services Three Single-->
+                    <div class="col-xl-4 col-lg-4 wow fadeInLeft" data-wow-delay="{% cycle '0' '200' '400' %}ms">
+                        <div class="services-three__single">
+                            <div class="services-three__single-img">
+                                <div class="services-three__single-img-inner">
+                                    <img src="{{ element.img.url }}" alt="" />
+                                </div>
+                                <div class="services-three__icon">
+                                    <span class="{{ element.icon.icon_class }}"></span>
+                                </div>
+                            </div>
+                            <div class="services-three__single-content">
+                                <h2 class="services-three__title text-break"><a href="{{ element.get_absolute_url }}">{{ element.name }}</a></h2>
+                                        <p class="services-three__text text-break">
+                                            {{ element.excerpt|truncatechars:95 }}
+                                        </p>
+                                <a class="services-three__arrow" href="{{ element.get_absolute_url }}"><span
+                                        class="icon-right-arrow"></span></a>
+                                    </div>
+                        </div>
+                    </div>
+                    <!--End Services Three Single-->
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        <!--End Services Three-->
+                
+        <!--Wedda Ready Start-->
+        <section class="qutiiz-ready">
+            <div class="qutiiz-ready-bg-box">
+                <div class="qutiiz-ready-bg jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
+                    style="background-image: url('https://images.pexels.com/photos/5716032/pexels-photo-5716032.jpeg?cs=srgb&dl=pexels-artempodrez-5716032.jpg&fm=jpg&h=1065&w=1894&fit=crop')"></div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12" style="z-index:9;">
+                        <div class="cta-one__inner wow fadeInUp" data-wow-delay="100ms" data-wow-duration="2500ms">
+                            <div class="cta-one-shape-1"></div>
+                            <div class="cta-one-shape-2"></div>
+                            <div class="cta-one-shape-3"></div>
+                            <div class="cta-one__left">
+                                <h2 class="cta-one__title">the passion trying & skill can make <br> a top-performing
+                                    company</h2>
+                            </div>
+                            <div class="cta-one__right">
+                                <a aria-label="Chat on WhatsApp" href="https://wa.me/201115424261" class="img-fluid"><img src="{% static 'images/WhatsAppButtonWhiteSmall.png' %}" alt="Whatsapp conatact"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Wedda Ready End-->
+
+{% endblock content %}
