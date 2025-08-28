@@ -314,7 +314,7 @@
                     </div>
                 </div>
                 <div class="row filter-layout masonary-layout">
-                    <div class="col-xl-3 col-lg-6 col-md-6 filter-item market photo">
+                    {% comment %} <div class="col-xl-3 col-lg-6 col-md-6 filter-item market photo">
                         <!--Portfolio One Single-->
                         <div class="project-one__single">
                             <div class="project-one__img">
@@ -508,7 +508,22 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> {% endcomment %}
+                    {% for project in projects %}
+                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item {{ project.category.slug }} {% for tag in project.tags.all %} {{ tag.slug }} {% endfor %}">
+                            <!--Portfolio One Single-->
+                            <div class="project-one__single">
+                                <div class="project-one__img">
+                                    <img src="{{ project.thumb.url }}" alt="">
+                                    <div class="project-one__hover">
+                                        <p class="project-one__tagline">{{ project.category.name|title }}</p>
+                                        <h3 class="project-one__title"><a href="{{ project.get_absolute_url }}">{{ project.name }}</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
         </section>

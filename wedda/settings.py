@@ -1,5 +1,6 @@
 from pathlib import Path
 from os import environ, getenv
+from django.utils.translation import gettext_lazy as _
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -15,9 +16,9 @@ CONTENT_DIR = BASE_DIR / "content"
 SECRET_KEY = environ.get('SECRET_KEY', "QWERTyoP[poIuytRewASdfgHJkL;?.<mnBvcXzxCvbNm,./;lkJhgFdSWQErtYui]")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = environ.get('DEBUG', 'True') == 'True'    
+DEBUG = environ.get('DJANGO_DEBUG', 'True') == 'True'    
 
-ALLOWED_HOSTS = ['wedda.agency', 'www.wedda.agency', '*']
+ALLOWED_HOSTS = environ.get('DJANGO_HOSTS', '*').split(',')
 
 if DEBUG : 
     ALLOWED_HOSTS.append('*')
@@ -48,6 +49,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -117,6 +119,13 @@ LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
+
+LOCALE_PATHS = (CONTENT_DIR / 'locale',)
+
+LANGUAGES = [
+    ('en', _('English')),
+    ('ar', _('Arabic')),
+]
 
 USE_TZ = True
 
