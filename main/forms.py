@@ -5,6 +5,8 @@ import logging
 import time
 import threading
 from .models import contact
+from django.core.exceptions import ValidationError
+
 
 logger = logging.getLogger(__name__)
 
@@ -14,6 +16,7 @@ class ContactForm(forms.Form):
     email = forms.EmailField(required=True, widget=forms.TextInput(attrs={'placeholder': 'Your Email'}))
     phone = forms.CharField(max_length=11, widget=forms.TextInput(attrs={'placeholder': 'Your Phone'}))
     subject = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'Subject'}))
+    honeypot = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'info'}))
     message = forms.CharField(widget=forms.Textarea(attrs={'placeholder': 'Write a message.'}))
 
 
@@ -31,6 +34,13 @@ class ContactForm(forms.Form):
             message = self.cleaned_data.get('message'),
         )
         time.sleep(3)
+    
+    def clean_honeypot(self):
+        honeypot_value = self.cleaned_data.get('honeypot')
+        logger.error(f"Honeypot Value: {honeypot_value}")
+        if honeypot_value:
+            raise ValidationError("Honeypot field should be left blank.")
+        return honeypot_value
 
 
 def send_contact_email(cleaned_data:dict):
